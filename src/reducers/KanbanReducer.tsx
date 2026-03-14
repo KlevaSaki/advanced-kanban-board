@@ -32,6 +32,10 @@ export function kanbanReducer(
                 const { taskId, newColumnId } = action.payload;
                 const task = state.tasks[taskId];
 
+                if(task.columnId === newColumnId) {
+                    return state;
+                }
+
                 const oldColumn = state.columns[task.columnId];
                 const newColumn = state.columns[newColumnId];
 

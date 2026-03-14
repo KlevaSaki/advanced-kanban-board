@@ -1,9 +1,13 @@
 import './App.css'
+import Board from './components/Board'
+import { KanbanProvider } from './context/KanbanProvider'
 
 function App() {
 
   return (
-    <div>Advance Kanban Board with Drag and Drop</div>
+    <KanbanProvider>
+          <Board />
+    </KanbanProvider>
   )
 }
 
